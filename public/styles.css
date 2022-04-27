@@ -20,10 +20,11 @@ nav{
 
 .nav-one{
     text-align: left;
-    font-size: 20px;
+    font-size: 30px;
     text-decoration: none;
     color: rgb(52, 111, 52);
     font-weight: bolder;
+    font-family: 'Calistoga', cursive;
 }
 .nav-two{
     text-align: right;
@@ -40,14 +41,18 @@ img{
 .home{
     text-align: center;
     font-size: 150px;
+    font-family: 'Oleo Script', cursive;
+    margin-top: 50px;
+    color: rgb(52, 111, 52);
 }
 
 .home-link{
-    text-align: center;
+   text-align: center;
     font-size: 50px;
     text-decoration: none;
     color: rgb(117, 168, 117);
     justify-content: center;
+    font-family: 'Calistoga', cursive;
 }
 ul{
 list-style: none;
@@ -125,7 +130,8 @@ select{
 }
 .titles{
     font-size: 25px;
-    color: rgb(117, 168, 117);
+    color: rgb(52, 111, 52);
+    font-family: 'Calistoga', cursive;
 
 }
   
@@ -148,10 +154,18 @@ select{
 }
 
 .show-title{
-    font-size: 50px;
+    font-size: 60px;
     color: rgb(52, 111, 52);
-    margin-top: -100px;
+    margin-top: -125px;
+    font-family: 'Oleo Script', cursive;
 }
+
+.new-title{
+    font-size: 60px;
+    color: rgb(52, 111, 52);
+    font-family: 'Oleo Script', cursive;
+}
+
 .edit-title{
     font-size: 50px;
     color: rgb(52, 111, 52);
@@ -178,18 +192,22 @@ select{
 
 .text{
     font-size: 25px;
+    color: rgb(83, 126, 83);
 }
 
 .dayDiv {
     display: flex ;
     flex-wrap:  wrap;
-    flex: 0 0 300px;
+    flex: 0 0 400px;
     flex-direction: row;
     justify-content: space-around;
     height: 30vh; 
-    border: 1px solid rgb(117, 168, 117);
     border-radius: 8px;
     margin-bottom: 15px; 
+}
+.day-width{
+    width: 385px;
+    border: 1px solid rgb(117, 168, 117);
 }
 
 .index-day{

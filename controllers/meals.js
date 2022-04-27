@@ -45,7 +45,7 @@ mealRouter.put("/weekly-meals/:id", (req, res) => {
     //       console.log(req.body.ingredients)
     //     }
     //   }
-    console.log(req.body.ingredients1)
+    // console.log(req.body.ingredients)
     // uIng = JSON.stringify(req.params.ingredients)
     // updatedIng = JSON.stringify(req.body.ingredients)
     Meals.findByIdAndUpdate(
@@ -66,7 +66,6 @@ mealRouter.put("/weekly-meals/:id", (req, res) => {
 //Create -- DONE
 mealRouter.post('/weekly-meals', (req, res) => {
 
-    console.log(req.body.name)
     Meals.create(req.body, (err, createdMeal) => {
         if (err) {
             res.send(err);

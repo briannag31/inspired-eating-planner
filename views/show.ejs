@@ -8,12 +8,12 @@
         <div class="nav-bar">
        <a class="nav-one" href="/meal-planner/weekly-meals">All Meals </a> 
        <img src="https://i.imgur.com/QTaaQyZ.png?1" alt="">
-       <a class="nav-two" href="/meal-planner/weekly-meals/new"> Add a New Meal</a>
+       <a class="nav-one" href="/meal-planner/weekly-meals/new"> Add a New Meal</a>
        </div>
     </nav>
 <div></div>
     <div class="show-btn">
-        <a href="/meal-planner/weekly-meals/<%= meals._id %>/edit  "> <button> Edit <%= meals.name %></button></a>
+        <a href="/meal-planner/weekly-meals/<%= meals._id %>/edit  "> <button class="button"> Edit <%= meals.name %></button></a>
     
         <form action="/meal-planner/weekly-meals/<%= meals.id %>?_method=DELETE" method="POST">
             <input class="button" type="submit" value="DELETE" />
@@ -30,7 +30,7 @@
 
    <div class="show-div">
         <a class="titles">Time to Cook: </a> <br>
-     <span class="text"> <%= meals.time %> </span>
+     <span class="text"> <%= meals.time %> minutes</span>
     </div>
 </div>
     <div class="show-div">

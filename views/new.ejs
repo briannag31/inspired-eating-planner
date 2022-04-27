@@ -7,11 +7,11 @@
         <a class="nav-one" href="/meal-planner">Home </a> 
         <img src="https://i.imgur.com/QTaaQyZ.png?1" alt="">
         
-        <a class="nav-two" href="/meal-planner/weekly-meals">All Meals </a> 
+        <a class="nav-one" href="/meal-planner/weekly-meals">All Meals </a> 
      </div>
     </nav>
     <div class="route-page">
-    <h1>Add a New Meal</h1>
+    <h1 class="new-title">Add a New Meal</h1>
     
     <form  action ="/meal-planner/weekly-meals" method="POST">
         
@@ -45,11 +45,11 @@
     </div>
     <div class="two">
         <div> <a class="titles">Ingredients:</a> <br>
-            <input type="text" placeholder="Ingredients">
+            <input type="text" placeholder="Ingredients" name="ingredients"> 
             <div id="new_Ingredient"></div>
-            <input type="hidden" value="1" id="totalIngredients"> 
-            <button class="add" type="button">Add</button>
-            <button class="remove" type="button">remove</button>
+            <input type="hidden" value="1" id="totalIngredients">
+            <button class="add button" type="button">Add</button>
+            <button class="remove button" type="button">remove</button>
         </div>
          <input class="submit-new" type="submit" value="Create New Meal">
     </div>

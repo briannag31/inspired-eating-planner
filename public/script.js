@@ -5,7 +5,7 @@ $('.remove').on('click', remove);
 
 function add() {
  var newIngredient = parseInt($('#totalIngredients').val()) + 1;
- var new_input = "<input type='text' id='new" + newIngredient + "'>";
+ var new_input = "<input type='text' name='ingredients' id='new'"  + newIngredient +">";
 
  $('#new_Ingredient').append(new_input);
 
