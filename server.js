@@ -3,9 +3,9 @@ const mongoose =  require("mongoose");
 const app = express()
 const methodOverride = require("method-override")
 require('dotenv').config()
+const MONGO = process.env.DATABASE_URL
 
-
-mongoose.connect(process.env.DATABASE_URL, {
+mongoose.connect(MONGO, {
     useNewUrlParser: true,
     useUnifiedTopology: true,  
 });
@@ -30,5 +30,5 @@ app.post(function(req, res, next){
     next();
 });
 
-const PORT = process.env.PORT 
+const PORT = process.env.PORT || 3000
 app.listen(PORT, () => console.log("we are running"))
