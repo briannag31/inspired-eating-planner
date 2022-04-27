@@ -42,3 +42,4 @@
 - Add authentication
 - Add an API call so users can search for meal ideas
 - Add a shopping list so as users are adding meals, they can click on ingredients to add to their list
+- Make it mobile friendly

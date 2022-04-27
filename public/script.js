@@ -1,5 +1,3 @@
-
-
 $('.add').on('click', add);
 $('.remove').on('click', remove);
 

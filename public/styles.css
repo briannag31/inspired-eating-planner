@@ -94,8 +94,6 @@ input[type="button"]:focus {
   border-color: #888;
   outline: 0; }
 
-
-
   input[type="number"],
   input[type="text"],
   select {
@@ -132,7 +130,6 @@ select{
     font-size: 25px;
     color: rgb(52, 111, 52);
     font-family: 'Calistoga', cursive;
-
 }
   
 .submit-new{
@@ -178,6 +175,7 @@ select{
 .description{
     text-align: center;
 }
+
 #desc{
     width: 500px;
 }

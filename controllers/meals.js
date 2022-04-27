@@ -4,7 +4,7 @@ const Meals = require('../models/mealSchema')
 const mealSeedData = require("../models/mealSeed")
 
 
-//Seed Route -- DONE
+//Seed Route
 mealRouter.get('/seed', (req, res) => {
     Meals.deleteMany({}, (err, deletedMeals) => {
         Meals.create(mealSeedData, (err, data) => {
@@ -12,26 +12,26 @@ mealRouter.get('/seed', (req, res) => {
         });
     });
 });
-//home
+//Home
 mealRouter.get("/", (req,res) =>{
     Meals.find({}, (err, allMeals) => {
         res.render('home.ejs');
     });
 });
 
-//Index -- DONE
+//Index
 mealRouter.get('/weekly-meals', (req, res) => {
     Meals.find({}, (err, allMeals) => {
         res.render('index.ejs', {meals: allMeals});
     });
 });
 
-//New -- DONE
+//New
 mealRouter.get('/weekly-meals/new', (req, res) => {
     res.render('new.ejs');
 });
 
-//Delete -- DONE
+//Delete
 mealRouter.delete("/weekly-meals/:id", (req, res) => {
     Meals.findByIdAndRemove(req.params.id, (err, data) => {
       res.redirect("/meal-planner/weekly-meals")
@@ -40,22 +40,13 @@ mealRouter.delete("/weekly-meals/:id", (req, res) => {
 
 //Update 
 mealRouter.put("/weekly-meals/:id", (req, res) => { 
-    // for(let key in req.body) {
-    //     if(req.body.hasOwnProperty(key)){
-    //       console.log(req.body.ingredients)
-    //     }
-    //   }
-    // console.log(req.body.ingredients)
-    // uIng = JSON.stringify(req.params.ingredients)
-    // updatedIng = JSON.stringify(req.body.ingredients)
+
     Meals.findByIdAndUpdate(
       req.params.id,
       req.body,
-    //   { $addToSet: { uIng:updatedIng} },
       {
-        new: true
+        new: true,
       },
-      
       (error, updatedMeal) => {
         res.redirect(`/meal-planner/weekly-meals/${req.params.id}`)
       }
@@ -63,7 +54,7 @@ mealRouter.put("/weekly-meals/:id", (req, res) => {
   })
 
 
-//Create -- DONE
+//Create
 mealRouter.post('/weekly-meals', (req, res) => {
 
     Meals.create(req.body, (err, createdMeal) => {
@@ -75,7 +66,7 @@ mealRouter.post('/weekly-meals', (req, res) => {
     })
 });
 
-//Edit -- DONE
+//Edit
 mealRouter.get("/weekly-meals/:id/edit", (req, res) => {
     Meals.findById(req.params.id, (error, foundMeal) => {
         res.render("edit.ejs", {
@@ -84,14 +75,11 @@ mealRouter.get("/weekly-meals/:id/edit", (req, res) => {
     })
   })
 
-//Show -- DONE
-
+//Show
 mealRouter.get('/weekly-meals/:id', (req, res) => { 
     Meals.findById(req.params.id, (err, allMeals) => {
         res.render('show.ejs', {meals: allMeals});
     });
 })
-
-
 
 module.exports = mealRouter
