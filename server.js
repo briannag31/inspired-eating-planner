@@ -5,7 +5,7 @@ const methodOverride = require("method-override")
 require('dotenv').config()
 const MONGO = process.env.DATABASE_URL
 
-mongoose.connect(MONGOlog, {
+mongoose.connect(MONGO, {
     useNewUrlParser: true,
     useUnifiedTopology: true,  
 });
