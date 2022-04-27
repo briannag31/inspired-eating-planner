@@ -1,0 +1,26 @@
+{
+  "name": "inspired-eating-planner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.7",
+    "express": "^4.18.0",
+    "gitignore": "^0.7.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.3.1",
+    "morgan": "^1.10.0",
+    "static": "^2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
