@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("partials/head.ejs") %>
+
+  <body>
+    <nav>
+      <div class="nav-bar">
+       <a class="nav-one" href="/meal-planner">Home </a> 
+       <img src="https://i.imgur.com/QTaaQyZ.png?1" alt="">
+       
+       <a class="nav-two" href="/meal-planner/weekly-meals">All Meals </a> 
+    </div>
+   </nav>
+   <div class="route-page">
+    <h1 class="edit-title">Edit <%= meals.name %> </h1>
+    <form action="/meal-planner/weekly-meals/<%=meals._id%>?_method=PUT" method="post">
+
+    <div class="one top">
+      <div>
+        <label for="day" class="titles">Day of the Week:</label><br>
+        <select name="day">
+          <option selected>Monday</option>
+          <option>Tuesday</option>
+          <option>Wednesday</option>
+          <option>Thursday</option>
+          <option>Friday</option>
+          <option>Saturday</option>
+          <option>Sunday</option>
+        </select>
+      </div>
+
+      <div class=" top">
+        <a class="titles">Name:</a> <br>
+         <input type="text" name="name" value="<%=meals.name%>" /><br />
+      </div>
+
+      <div class=" top">
+        <a class="titles">Cooking Time:</a> <br>  <input type="number" name="time" value="<%=meals.time%>" /><br />
+        </div>
+    
+      </div>
+
+ <div class=" description">
+        <a class="titles">Description:</a>  <br><input id="desc" type="text" name="description" value="<%=meals.description%>" /><br />
+      </div>
+
+
+      <div class="two">
+        <div> <a class="titles">Ingredients:</a><br>
+          <input type="text" placeholder="Add Ingredient" value="<%= meals.ingredients[0] %> "> <br>
+          <input type="text" value="<%= meals.ingredients[1] %> "><br>
+          <input type="text" placeholder="Add Ingredient" value="<%= meals.ingredients[2] %> "><br>
+          <input type="text" placeholder="Add Ingredient" value="<%= meals.ingredients[3] %> "><br>
+          <input type="text"placeholder="Add Ingredient" value="<%= meals.ingredients[4] %> "><br>
+          <input type="text" placeholder="Add Ingredient" value="<%= meals.ingredients[5] %> "><br>
+          <input type="text" placeholder="Add Ingredient" value="<%= meals.ingredients[6] %> "><br>
+        
+          <div id="new_Ingredient"></div>
+      </div>
+    
+      <input class="button" type="submit" value="Submit Changes" />
+    </div>
+    </form>
+  </div>
+  </body>
+</html>

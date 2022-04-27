@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("partials/head.ejs") %>
+  <body>
+    <nav>
+      <div class="nav-bar">
+        <a class="nav-one" href="/meal-planner">Home </a> 
+        <img src="https://i.imgur.com/QTaaQyZ.png?1" alt="">
+        <a class="nav-one"href="/meal-planner/weekly-meals/new">Add a New Meal</a>
+         </div> 
+      </nav>
+
+      <div class="dayDiv">
+   <div class="monday dayDiv">
+     <img class="day-img" src="https://i.imgur.com/Mhdh9fI.png?1" alt="">
+     <span class="index-day" id="monday"></span>
+   </div>
+
+   <div class="tuesday dayDiv">
+    <img class="day-img" src="https://i.imgur.com/lN3Sg05.png?1" alt="">
+    <span class="index-day" id="tuesday"></span>
+  </div>
+
+  <div class="wednesday dayDiv">
+    <img class="day-img" src="https://i.imgur.com/j9crezW.png?1" alt="">
+    <span class="index-day" id="wednesday"></span>
+  </div>
+
+  <div class="thursday dayDiv">
+    <img class="day-img" src="https://i.imgur.com/YTXQLaa.png?1" alt="">
+    <span class="index-day" id="thursday"></span>
+  </div>
+
+  <div class="friday dayDiv">
+    <img class="day-img" src="https://i.imgur.com/opeUSkZ.png?1" alt="">
+    <span class="index-day" id="friday"></span>
+  </div>
+
+  <div class="saturday dayDiv">
+    <img class="day-img" src="https://i.imgur.com/cB3gupS.png?1" alt="">
+    <span class="index-day" id="saturday"></span>
+  </div>
+
+  <div class="dayDiv">
+    <img class="day-img" src="https://i.imgur.com/Ri9FdxM.png?1" alt="">
+    <span  class="index-day" id="sunday"></span>
+  </div>
+</div>
+
+    <ul class="container">
+      <%meals.forEach(meal => { %>
+      <li>
+        <a class="day">
+          <%=meal.day; %>  </a> <br>
+        <a class="name" href="/meal-planner/weekly-meals/<%=meal._id; %>"> <%=meal.name; %> </a> <br>
+      <% }) %>
+    </ul>
+ <script>
+   const nodeList = $(".day");
+   const nodeList2 =$(".name")
+   const names = $(".name")
+   for (let i = 0; i < nodeList2.length; i++)
+  {
+   
+  }
+for (let i = 0; i < nodeList.length; i++){
+  console.log( nodeList[i].innerText)
+
+if (nodeList[i].innerText=== "Monday"){
+    $("#monday").append(nodeList2[i])
+  } else if (nodeList[i].innerText === "Tuesday"){
+    $("#tuesday").append(nodeList2[i])
+  }else if (nodeList[i].innerText === "Wednesday"){
+    $("#wednesday").append(nodeList2[i])
+  }else if (nodeList[i].innerText === "Thursday"){
+    $("#thursday").append(nodeList2[i])
+  }else if (nodeList[i].innerText === "Friday"){
+    $("#friday").append(nodeList2[i])
+  }else if (nodeList[i].innerText === "Saturday"){
+    $("#saturday").append(nodeList2[i])
+  }else if (nodeList[i].innerText === "Sunday"){
+    $("#sunday").append(nodeList2[i])
+  }
+
+}     
+      
+      
+      </script>
+  </body>
+</html>
