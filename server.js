@@ -5,7 +5,7 @@ const methodOverride = require("method-override")
 require('dotenv').config()
 const MONGO = process.env.DATABASE_URL
 
-mongoose.connect(MONGO, {
+mongoose.connect(MONGOlog, {
     useNewUrlParser: true,
     useUnifiedTopology: true,  
 });
@@ -30,5 +30,5 @@ app.post(function(req, res, next){
     next();
 });
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 4000
 app.listen(PORT, () => console.log("we are running"))
