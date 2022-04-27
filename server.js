@@ -21,7 +21,10 @@ app.use("/static", express.static("public"))
 app.use(express.json());
 
 
-
+//handle root requests
+app.get("/", (req,res) => {
+    res.redirect("/meal-planner")
+})
 
 const storeController = require("./controllers/meals")
 app.use("/meal-planner", storeController);
