@@ -41,15 +41,14 @@
 | /meal-planner/weekly-meals| POST | Adds new meal to index page| 
 
 ## Model
+|Meal  ||
+| -------- | ------ |  
+| ID | Object | 
+| Name | String | 
+| Description| String | 
+| Time| Number |
+| Ingredients| Array |
 
-Meals{  
-    id: Object,  
-    day: string,  
-    name: string,  
-    description: string,  
-    ingredients: array,  
-    time: number,  
-}
 
 ## Wireframes 
 
