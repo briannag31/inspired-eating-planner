@@ -27,7 +27,38 @@
 - Google Fonts
 - Canva
 
+## Route Tables
 
+| Endpoint | Method | Response | 
+| -------- | ------ | -------- | 
+| /meal-planner | GET | Takes user to home page| 
+| /meal-planner/weekly-meals | GET | Index of all meals|
+| /meal-planner/weekly-meals/new | GET | Allows user to add new meal|
+| /meal-planner/weekly-meals/:id| GET | Shows individual meal | 
+| /meal-planner/weekly-meals/:id/edit | GET | Shows form for user to edit meal |
+| /meal-planner/weekly-meals/:id/delete| DELETE | deletes meal with matching id| 
+| /meal-planner/weekly-meals/:id| PUT | Updates meal with matching id| 
+| /meal-planner/weekly-meals| POST | Adds new meal to index page| 
+
+## Model
+
+Meals{  
+    id: Object,  
+    day: string,  
+    name: string,  
+    description: string,  
+    ingredients: array,  
+    time: number,  
+}
+
+## Wireframes 
+
+![Home Page](https://i.imgur.com/C73sf2d.png)
+![Index Page](https://i.imgur.com/SRMWLdO.png)
+![New Page](https://i.imgur.com/7b09GNv.png)
+![Show Page](https://i.imgur.com/c5EQCuw.png)
+![Edit Page](https://i.imgur.com/Gj7JFUy.png)
+![Model](https://i.imgur.com/IfqaZcx.png)
 
 ## User Interface Mockups
 
